@@ -1,0 +1,48 @@
+.car-search {
+  @extend .gutter-bottom-lg;
+  @extend .gutter-top;
+
+  .widget-title {
+    position:relative;
+    @extend .gutter-bottom-lg;
+    border: 0px;
+    background-color: #29434F;
+    color: #fff;
+
+    em {
+      color: #fb7804;
+      font-style: normal;
+    }
+  }
+  .form-group {
+    display:inline-block;
+    width: 100%;
+
+    label {
+      float:left;
+      padding-right: 5px;
+    }
+    .form-control {
+      float:right;
+      height: 25px;
+
+      select {
+        margin:4px;
+        width: 100%;
+      }
+    }
+  }
+  .top-img {
+    z-index: 500;
+    top: -5px;
+    right: 0;
+    position:absolute;
+  }
+
+  button {
+    background-color:#29434F;
+    border: 0;
+    color: #fff;
+  }
+
+}

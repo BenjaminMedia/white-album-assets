@@ -1,0 +1,53 @@
+.header-giant {
+ @extend .header-primary;
+}
+.header-large {
+  @extend .header-primary;
+}
+.header-primary { font-size: $font-size-h1 - 10; }
+.header-secondary { font-size: $font-size-h2 - 8; }
+.header-tertiary { font-size: $font-size-h3 - 5; }
+.header-quaternary { font-size: $font-size-h4 - 2; }
+
+.copy { font-size: $font-size-base; }
+.copy-distinct {
+  font-size: $font-size-base;
+  font-weight: bold;
+}
+.copy-tiny { font-size: $font-size-base - 4; }
+.copy-note {
+  @extend .copy-tiny;
+  font-style: italic;
+}
+.copy-muted {
+  @extend .copy-tiny;
+  color: $gray-light;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.bold-text {font-weight: bold !important; }
+.reset-lineheight {line-height: 0; }
+
+.reset-text-color { color: $text-color; }
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+blockquote {
+  position:relative;
+  margin:20px;
+  border:0px;
+  color:$gray-light;
+  &:before {
+    display: block;
+    content: "\201C";
+    font-size: 100px;
+    position: absolute;
+    left: -30px;
+    top: -22px;
+    color: $gray-light;
+  }
+}
+

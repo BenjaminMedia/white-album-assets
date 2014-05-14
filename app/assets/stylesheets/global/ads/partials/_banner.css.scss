@@ -1,0 +1,42 @@
+.banner {
+  text-align: center;
+  margin-bottom: 25px;
+  z-index: 10;
+}
+
+.horseshoe {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  
+  .horseshoe-container {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    
+    .top-banner {
+      float: left;
+    }
+    
+    .side-banner {
+      width: 160px;
+    }
+    .side-banner.left {
+      float: left;
+      margin-left: -160px;
+    }
+    .side-banner.right {
+      float: right;
+      margin-right: -160px;
+    }
+    
+    .static {
+      position: absolute;
+      margin-top: 1200px!important;
+    }
+  }
+}
+
+.gallery-banner {
+  height: 540px;
+  padding: 50px;
+}

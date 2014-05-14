@@ -1,0 +1,29 @@
+.create-profile {
+  input[type="radio"], input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  select {
+    font-size: 14px;
+  }
+  
+  ul {
+    padding: 0 0 0 15px;
+  }
+  
+  .terms {
+    font-size: 12px;
+  }
+  
+  .birthday {
+    .why-should-i {
+      font-size: 12px;
+      line-height: 16px;
+      display: block;
+    }
+    
+    .tooltip {
+      width: 200px;
+    }
+  }
+}

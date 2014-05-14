@@ -1,0 +1,24 @@
+.polls {
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    margin: 0;
+    padding: 3px 0;
+    width: 100%;
+    overflow-y: auto;
+    input {
+      margin-right: 2%;
+      margin-top: 3px;
+      width: 4%;
+      float: left;
+      clear: left;
+    }
+  }
+  label {
+    width: 90%;
+    float: left;
+    font-weight: normal;
+  }
+}

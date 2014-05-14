@@ -1,0 +1,65 @@
+.profile-image {
+  bottom: -100px;
+}
+
+.app-bar {
+  width: 100%;
+  list-style: none;
+  @include background-image(linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.6) 60%));
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding-left: 240px;
+
+  li {
+    display: inline-block;
+    text-align: center;
+    padding-right: 20px;
+
+    p {
+      color: #fff;
+      margin: 0;
+    }
+    .title {
+      font-size: 14px;
+    }
+    .count {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+}
+
+.profile-name {
+  margin: 10px 0;
+  padding-left: 240px;
+}
+
+.profile-status {
+  margin: 0;
+  padding-left: 240px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.profile-feed-item {
+  .actions {
+    .action {
+      font-size: 14px;
+      margin-right: 20px;
+    }
+  }
+}
+
+.edit {
+  .cover-image {
+    overflow: hidden;
+    height: 125px;
+  }
+}
+
+.edit-header {
+  @extend .profile-name;
+
+  margin: 10px 0 45px!important;
+}

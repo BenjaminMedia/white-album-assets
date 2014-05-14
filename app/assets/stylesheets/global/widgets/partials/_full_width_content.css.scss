@@ -1,0 +1,21 @@
+.full-width-content{
+  @extend .gutter-top;
+  @extend .row;
+
+  .widget-title{
+    margin-bottom: 10px;
+  }
+  .header-primary{
+    font-size:20px;
+    display: block;
+  }
+  .copy{
+    margin-top: 5px;
+    display: inline-block;
+  }
+  .article-description{
+    @include rgba-background-inline(rgba(0, 0, 0, 0.9));
+    padding: 15px;
+    color: #fff;
+  }
+}

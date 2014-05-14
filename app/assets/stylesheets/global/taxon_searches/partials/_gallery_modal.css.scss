@@ -1,0 +1,33 @@
+.taxon-gallery {
+  margin-top: 50px;
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  img { max-height: none; width: 100%;}
+  .rotator-direction-nav {
+    position: absolute;
+    top: 0;
+    margin: 20px 15px;
+    li {
+      margin-right: 10px;
+      font-size: 40px;
+      list-style: none;
+      float: left;
+    }
+  }
+  .rotator-control-nav {
+    padding-left: 15px;
+    li {
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-block;
+      margin-right: 10px;
+      list-style: none;
+      .rotator-active {
+        color: $gray;
+      }
+    }
+  }
+
+}

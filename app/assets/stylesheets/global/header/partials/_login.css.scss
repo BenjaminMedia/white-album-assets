@@ -1,0 +1,76 @@
+/*========== LOGIN =========*/
+
+  .user-nav {
+    position: absolute;
+    right: 200px;
+    top: 15px;
+    z-index: 1000;
+    
+    .user-login, .inbox {
+      color: #999;
+      display: block;
+      float: left;
+
+      &:hover{
+        color: $main-nav-hover-color;
+        text-decoration: none;
+      }
+    }
+
+    .popover {
+      .popover-content {
+        width: 273px;
+        display: block;
+
+        .forgot-password {
+          font-size: 12px;
+        }
+
+        .remember-me {
+          font-size: 14px;
+          padding-top: 8px;
+
+          input {
+            margin-right: 10px;
+          }
+        }
+
+        .no-profile {
+          border-top: 1px solid rgba(0, 0, 0, 0.2);
+          padding-top: 10px;
+          font-size: 14px;
+          text-align: center;
+        }
+
+        .profile-options {
+          list-style: none;
+
+          li {
+            padding-bottom: 10px;
+
+            a {
+              color: #000;
+
+              &:hover {
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .profile-icon:before {
+    @extend .fontawesome;
+    content: "\f007";
+  }
+
+  .inbox-icon:before {
+    @extend .fontawesome;
+    content: "\f01c";
+  }
+
+  .html-popover {
+    display: none;
+  }

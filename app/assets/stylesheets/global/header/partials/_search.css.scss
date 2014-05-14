@@ -1,0 +1,28 @@
+/*========== SEARCH =========*/
+
+  #form {
+    .form-group {
+      margin: 0;
+    }
+  }
+
+  .search-form {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 0;
+    z-index: 1000;
+  }
+
+  .form-control {
+    height: 32px;
+  }
+
+  .search-submit-input {
+    color: #999;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 5px;
+    top: 2px;
+  }

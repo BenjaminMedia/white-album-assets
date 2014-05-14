@@ -1,0 +1,41 @@
+.car-brands {
+  @extend .gutter-top;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: auto;
+
+    li {
+      @include border-radius(10px);
+
+      height: 110px;
+      margin:5px;
+      width: 11.4%;
+      min-width: 106px;
+      float: left;
+      list-style: none;
+      border: 1px solid #fff;
+      line-height: 107px;
+      text-align: center;
+      background-color: #fff;
+
+      &:hover {
+        border: 1px solid #e1e1e1;
+      }
+
+      img {
+        vertical-align: middle;
+      }
+    }
+    .view-all {
+      line-height: normal;
+      padding-top:30px;
+      background-color: #f8f8f8;
+
+      a {
+        color:#666;
+      }
+    }
+  }
+}

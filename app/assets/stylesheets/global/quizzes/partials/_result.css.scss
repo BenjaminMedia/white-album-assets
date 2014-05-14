@@ -1,0 +1,9 @@
+.answer-number{
+  @include circle-number($bgcolor: none, $color: #fff, $diameter: 50px, $font-size: 35px);
+}
+
+.quiz-answer{
+  border-bottom: 2px dotted $step-color;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}

@@ -1,0 +1,27 @@
+.taxon-search-results {
+  .load-wheel {
+    margin-top: 150px;
+  }
+  .image-container {
+    overflow: hidden;
+    height: 150px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  img {
+    max-height: 100%;
+  }
+  a:hover{
+    text-decoration: none;
+    & > .image-container {
+      opacity: 0.8;
+    }
+  }
+
+}
+
+.transition-all {
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+}

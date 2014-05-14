@@ -1,0 +1,25 @@
+.step-container{
+  @extend .gutter-reset;
+  list-style-type: none;
+  border-top: 2px solid $step-color;
+  width: 100%;
+  text-align: center;
+  margin: 75px 0 25px 0;
+  li{
+    display: inline-block;
+    margin: 0 5px;
+    height: $step-size;
+    width: $step-size;
+    line-height: $step-lineheight;
+  }
+  .count{
+    position: absolute;
+    margin-top: -1 * $step-size / 2;
+    @include circle-number($color: $step-color);
+  }
+  .current{
+    color: #fff;
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+  }
+}

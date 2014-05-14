@@ -1,0 +1,35 @@
+.blog-nav{
+  border-top:    2px solid  $blog-nav-border;
+  border-right:  0px;
+  border-bottom: 2px solid $blog-nav-border;
+  border-left:   0px;
+  padding:12px;
+  background-color: $blog-nav-bg;
+  list-style: none;
+  ul{
+    margin:0px;
+    li{
+      a{
+        color: $blog-nav-text;
+        text-transform:uppercase;
+        transition: all 0.3s ease-out;
+        padding:10px;
+      }
+      a:hover{
+          text-decoration: none;
+          background-color:$gray;
+      }
+    }
+  }
+  .mobile {
+    a {
+      color: $blog-nav-text;
+      text-transform: uppercase;
+    }
+    li{
+      color: $blog-nav-text;
+      padding:5px;
+      display: block;
+    }
+  }
+}

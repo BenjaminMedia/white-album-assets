@@ -1,0 +1,58 @@
+/* ========== LOGIN STYLING ========== */
+
+  .user-login {
+    right: 200px;
+
+    a {
+      font-size: 16px;
+    }
+  }
+
+  .search-form {
+    .form-group {
+      width: 100%;
+    }
+  }
+
+  .create-profile-pluss-icon {
+    font-size: 10px;
+    position: absolute;
+    left: 12px;
+  }
+
+/* ========== DEFAULT STYLING ========== */
+  .navbar.dropdown {
+    margin-bottom: 20px;
+  }
+  .navbar.default {
+    margin-bottom: 60px;
+  }
+  .navbar.all {
+    margin-bottom: 20px;
+  }
+
+  .nav {
+    li {
+      a {
+        padding: 13px 15px;
+      }
+    }
+  }
+
+  .navbar-nav {
+    li {
+      a {
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .navbar-subnav {
+    li {
+      a {
+        padding: 5px 12px;
+        font-size: 14px;
+      }
+    }
+  }

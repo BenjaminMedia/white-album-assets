@@ -1,0 +1,30 @@
+.promobar-bottom-bg{
+  background-color:$gray-lighter;
+}
+
+.promobar-bottom{
+  padding: 19px;
+  color: $gray;
+  ul{
+    margin-bottom: 0px;
+  }
+  a {
+    color: $gray-light;
+    text-transform: uppercase;
+    &:visited{
+      color: $gray-light;
+    }
+  }
+  .list-group{
+    padding-left:0px;
+    .list-group-items{
+      display: block;
+      .logo{
+        max-height: 15px;
+        position: absolute;
+        bottom: -55px;
+        left: 40px;
+      }
+    }
+  }
+}

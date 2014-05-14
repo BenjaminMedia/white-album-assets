@@ -1,0 +1,17 @@
+.btn-facebook{
+  @extend .btn;
+  background-color: $facebook-color;
+  color: #fff!important;
+  &:hover{
+    background-color: #8b9dc3;
+    color: #fff;
+  }
+  .fa-facebook {
+    padding-right: 10px;
+  }
+}
+
+button.close {
+  background: none;
+  border: none;
+}

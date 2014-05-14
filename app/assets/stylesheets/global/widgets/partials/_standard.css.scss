@@ -1,0 +1,8 @@
+.standard{
+  @extend .gutter-top;
+  @extend .mobile-styling;
+
+  .article-description {
+    padding: 10px 5px;
+  }
+}

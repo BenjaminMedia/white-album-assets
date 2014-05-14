@@ -1,0 +1,110 @@
+.mobile-styling {
+
+  .header-primary {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .copy {
+    font-size: $font-size-base - 2;
+    font-weight: 150;
+  }
+}
+
+.mobile-tiles {
+  @extend .col-xs-6;
+  @extend .mobile-styling;
+
+  .article-description {
+    padding: 10px 0px 10px 0px;
+  }
+
+  .copy {
+    @extend .hidden-xs;
+
+    margin-top: 5px;
+  }
+}
+
+.mobile-rows {
+  @extend .col-xs-12;
+  @extend .mobile-styling;
+
+  .article-description{
+    width:60%;
+    float:left;
+  }
+
+  .article-item {
+    img {
+      width:40%;
+      float:left;
+    }
+  }
+  .copy {
+    @extend .hidden-xs;
+  }
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.swipe-arrow {
+  @extend .fontawesome;
+
+  position: absolute;
+  top:48%;
+  font-size: 18px;
+  z-index: 999;
+  display: block;
+  color: #222;
+}
+
+.mobile-swipe {
+  @extend .col-xs-12;
+  @extend .mobile-styling;
+
+  overflow: hidden;
+
+  .header-primary {
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  .copy {
+    display: block;
+  }
+
+  .imagewrapper {
+    position:relative;
+
+    &:before {
+      @extend .swipe-arrow;
+
+      content: $fa-var-chevron-circle-left; // Fontawesome unicode for left arrow
+      left:-10px;
+    }
+
+    &:after {
+      @extend .swipe-arrow;
+
+      content: $fa-var-chevron-circle-right; // Fontawesome unicode for right arrow
+      right:-10px;
+    }
+  }
+
+}
+
+.horizontal-mobile-scroll {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  .inner { width: $screen-lg + 50; }
+}

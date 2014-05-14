@@ -1,0 +1,21 @@
+.competition{
+  background-color: $competition-bg;
+  padding-top: 20px;
+  hr{
+    margin: 15px 0;
+    border: 1px dashed $competition-hr;
+  }
+  h3{
+    margin: 10px 0;
+    font-size: $font-size-base + 2;
+  }
+  ol{
+    padding-left: 23px;
+  }
+  label{
+    font-size: $font-size-base - 2;
+  }
+  .form-group{margin-bottom: 5px;}
+  .help-block{font-size: $font-size-base - 3;}
+}
+

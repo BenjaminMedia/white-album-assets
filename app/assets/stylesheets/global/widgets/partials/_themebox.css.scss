@@ -1,0 +1,15 @@
+.themebox {
+  @extend .wg-content;
+  background-color: #f8f8f8;
+  border: 5px solid #000;
+  .article-labels{
+    display:none;
+  }
+  .article-description{
+    background:inherit;
+    color:#222;
+    .copy{
+      display:none !important;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+/* ========== DEFAULT STYLING ========== */
+  .nav-container {
+    padding: 0;
+  }
+  .navbar {
+    margin-bottom: 0;
+    @include border-radius($nav-border-radius);
+  }
+
+  nav.navbar {
+    background: $main-nav-bg-color;
+  }
+
+  .nav > li {
+    position: inherit;
+  }
+
+  .navbar-inverse {
+    border: none;
+    background: transparent;
+    border: none;
+
+    .navbar-toggle {
+      color: #000;
+      border-color: #000;
+
+      .icon-bar {
+        background-color: $main-nav-link-color;
+      }
+
+      &:focus {
+        background-color: $main-nav-focus-link-color;
+      }
+
+      &:hover {
+        background-color: $main-nav-focus-link-color;
+      }
+    }
+
+    .navbar-nav {
+
+      li {
+        a {
+          @include link-colors($main-nav-link-color, $main-nav-hover-color, $main-nav-hover-color);
+        }
+      }
+
+      li.active {
+        color: $main-nav-hover-color;
+        font-weight: 400;
+
+        a, a:hover {
+          color: $main-nav-focus-link-color;
+          background-color: $main-nav-focus-bg-color;
+        }
+      }
+      .open {
+
+        a:focus, a:hover {
+          color: $main-nav-focus-link-color;
+          background-color: $main-nav-focus-bg-color;
+        }
+
+        .dropdown-menu > li > a:hover {
+          color: $subnav-hover-color;
+        }
+      }
+
+      .navbar-subnav {
+        background-color: $subnav-bg-color;
+
+        li {
+
+          a {
+            background-color: $subnav-bg-color;
+            font-weight: 400;
+            font-size: 14px;
+            color: $subnav-link-color;
+
+            &:hover {
+              background-color: inherit;
+              color: $subnav-hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-collapse.in {
+    overflow-x: hidden;
+  }
+
+  .navbar-toggle {
+    margin-left: 10px;
+    float: left;
+    color: #000;
+    border: #000;
+  }
+
+  .dropdown-menu {
+    @include border-radius($nav-border-radius);
+    border-color: $subnav-border-color;
+  }
+
+  .abo-ad-header {
+    display: none;
+  }

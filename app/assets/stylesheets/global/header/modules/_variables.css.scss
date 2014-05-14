@@ -1,0 +1,15 @@
+$main-nav-bg-color:         #222 !default;
+$main-nav-hover-color:      #fff !default;
+$subnav-hover-color:        #000 !default;
+$subnav-bg-color:           $main-nav-hover-color !default;
+$main-nav-link-color:       #999 !default;
+$main-nav-focus-link-color: $main-nav-hover-color !default;
+$main-nav-focus-bg-color:   $subnav-hover-color !default;
+$nav-border-radius:         4px !default;
+$subnav-border-color:       #3d3d3d !default;
+$subnav-link-color:         $main-nav-link-color !default;
+
+// Variables specific to the all menu style
+$all-main-nav-border-color: $subnav-border-color !default;
+$all-subnav-border-color:   #c2c2c2 !default;
+$all-border-width:          1px !default;

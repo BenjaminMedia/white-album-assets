@@ -1,0 +1,38 @@
+.newspaper {
+  line-height: 1.5em;
+  font-size: 15px;
+  font-weight: 400;
+  widows: 1;
+  @include column-rule(1px, outset, #e1e1e1);
+  @include column-gap(40px);
+  @include column-rule-style(dashed);
+}
+  .col-1 {
+    @include column-count(1);
+  }
+  .col-2 {
+    @include column-count(2);
+  }
+  .col-3 {
+    @include column-count(3);
+    @include column-width(200px);
+  }
+
+.fact-box {
+  .title{
+  border: 1px solid transparent;
+  background-color:#333;
+  color:#fff;
+  padding: 5px 7px;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  }
+}
+
+.media {
+  margin-top:5px;
+  font-weight: bold;
+  font-size: 13px;
+  a { color:$brand-primary;}
+}
