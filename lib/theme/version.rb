@@ -1,9 +1,9 @@
 module Theme
   class Version
-    @major = 0
+    @major = 1
     @minor = 0
-    @tiny  = 1
-    @build = 'dev'
+    @tiny  = 0
+    @build = nil
 
     class << self
       attr_reader :major, :minor, :tiny, :build
