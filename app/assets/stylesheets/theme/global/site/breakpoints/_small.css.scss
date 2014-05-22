@@ -1,0 +1,11 @@
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm) {
+  .h1 {
+    font-size: $font-size-h1 + 10;
+  }
+
+  .lead-portrait {
+    width:100%;
+  }
+
+}

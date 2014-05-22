@@ -1,0 +1,62 @@
+.load-wheel {
+  @extend .fa, .fa-spinner, .fa-spin, .gutter-top-lg;
+  @extend .absolute;
+  
+  font-size: 50px;
+  left: 50%;
+  margin-left: -25px;
+  z-index: 10000;
+
+  &.fixed-center {
+    position: fixed;
+    top: 50%;
+    margin-top: -25px;
+  }
+}
+
+.modal-image {
+  @extend .text-center;
+  @extend .relative;
+  
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 30px;
+  
+  .close {
+    @extend .absolute;
+    
+    right: 0;
+    color: #fff;
+    line-height: 0;
+  }
+}
+
+.modal {
+  .close {
+    @extend .right;
+    
+    font-size: 30px;
+  }
+}
+
+/* Toggled from plugins/adjust-image.js */
+.adjust-image-height {
+  height: 100%;
+  width: auto;
+}
+
+.adjust-image-width {
+  height: auto;
+  width: 100%;
+}
+
+
+body {
+  scrollbar-face-color: #e1e1e1;
+  scrollbar-arrow-color: #e1e1e1;
+  scrollbar-track-color: #fff;
+  scrollbar-shadow-color: #fff;
+  scrollbar-highlight-color: #ccc;
+  scrollbar-3dlight-color: #fff;
+  scrollbar-darkshadow-color: #fff;
+}

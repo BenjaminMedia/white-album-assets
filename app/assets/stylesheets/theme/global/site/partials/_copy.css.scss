@@ -1,0 +1,93 @@
+.h1 {
+  font-size: $font-size-h1 - 10;
+}
+
+.h2 {
+  font-size: $font-size-h2 - 8;
+}
+
+.h3 {
+  font-size: $font-size-h3 - 5;
+}
+
+.h4 {
+  font-size: $font-size-h4 - 2;
+}
+
+.text {
+  font-size: $font-size-base;
+}
+
+.text-distinct {
+  @extend .text-bold;
+  
+  font-size: $font-size-base;
+}
+
+.text-tiny {
+  font-size: $font-size-base - 4;
+}
+
+.text-note {
+  @extend .text-tiny;
+  @extend .text-italic;
+}
+
+.text-muted {
+  @extend .text-tiny;
+  @extend .text-bold;
+  
+  color: $gray-light;
+  margin: 5px 0;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-thin {
+  font-weight: 150;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.reset-lineheight {
+  line-height: 0;
+}
+
+.reset-text-color {
+  color: $text-color;
+}
+
+blockquote {
+  @extend .relative;
+  
+  margin: 20px;
+  border: 0px;
+  color: $gray-light;
+  
+  &:before {
+    @extend .absolute;
+    @extend .block;
+    
+    content: "\201C";
+    font-size: 100px;
+    left: -30px;
+    top: -22px;
+    color: $gray-light;
+  }
+}

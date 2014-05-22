@@ -1,0 +1,277 @@
+/* ========== CONTAINERS ========== */
+
+  .widget {
+    @extend .container;
+    @extend .bg-inner;
+    @extend .gutter-bottom-lg;
+
+    padding-bottom: 15px;
+  }
+
+  .segment {
+    @extend .widget;
+  }
+
+/* ========== WIDTHS ========== */
+
+  .full-width {
+    width: 100%;
+  }
+
+  .max-full-width {
+    max-width: 100%;
+  }
+
+  .fb-comments, .fb-comments iframe[style], .fb-comments span {
+    width: 100% !important;
+  }
+
+/* ========== POSITIONS ========== */
+
+  .relative {
+    position: relative;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+
+  .fixed {
+    position: fixed;
+  }
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .center {
+    @extend .block;
+
+    margin: 0px auto;
+  }
+
+/* ========== GUTTERS ========== */
+
+  .gutter-vertical {
+    margin: $padding-large-vertical+5 0;
+  }
+
+  .gutter-vertical-lg {
+    margin: $padding-large-vertical+15 0;
+  }
+
+  .gutter-top {
+    margin-top: $padding-large-vertical;
+  }
+
+  .gutter-top-lg {
+    margin-top: $padding-large-vertical+15;
+  }
+
+  .gutter-horizontal {
+    margin: 0 $padding-small-horizontal;
+  }
+
+  .gutter-horizontal-lg {
+    margin: 0 $padding-small-horizontal+5;
+  }
+
+  .gutter-bottom {
+    margin-bottom: $padding-large-vertical;
+  }
+
+  .gutter-bottom-lg {
+    margin-bottom: $padding-large-vertical+15;
+  }
+
+  .gutter-right {
+    margin-right: $padding-small-horizontal;
+  }
+
+  .gutter-left {
+    margin-left: $padding-small-horizontal;
+  }
+
+/* ========== RESETS ========== */
+
+  .gutter-reset {
+    margin: 0;
+    padding: 0;
+  }
+
+  .gutter-vertical-reset {
+    margin: 0 auto;
+    padding: 0 auto;
+  }
+
+  .gutter-top-reset {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .gutter-bottom-reset {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .gutter-horizontal-reset {
+    margin: auto 0;
+    padding: auto 0;
+  }
+
+  .reset-padding {
+    padding: 0;
+  }
+
+  .reset-padding-left {
+    padding-left: 0;
+  }
+
+  .reset-padding-right {
+    padding-right: 0;
+  }
+
+/* ========== OVERFLOWS ========== */
+
+  .overflow-auto {
+    overflow: auto;
+  }
+
+  .overflow-scroll {
+    overflow: scroll;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+/* ========== DISPLAYS ========== */
+
+  .block {
+    display: block;
+  }
+
+  .inline {
+    display: inline;
+  }
+
+  .inline-block {
+    display: inline-block;
+  }
+
+  /* this is a temporary name, when we update to bootstrap 3.0.1, it can be called .hide */
+  .bp-hide {
+    display: none;
+  }
+
+/* ========== RESPONSIVE ========== */
+
+  .hidden-xs-sm {
+    @extend .hidden-xs;
+    @extend .hidden-sm;
+  }
+
+  .visible-xs-sm {
+    @extend .visible-xs;
+    @extend .visible-sm;
+  }
+
+  .visible-md-lg {
+    @extend .visible-md;
+    @extend .visible-lg;
+  }
+
+  .hidden-md-lg {
+    @extend .hidden-md;
+    @extend .hidden-lg;
+  }
+
+/* ========== MISC ========== */
+
+  .hide-background {
+    background-color: transparent;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  .horizontal-scroll {
+    overflow: auto;
+    overflow-y: hidden;
+    margin: 0 auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+
+    .inner {
+      @extend .inline-block;
+      @extend .vertical-align-top;
+
+      white-space: normal;
+    }
+  }
+
+  .ellipsis {
+    @extend .overflow-hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .vertical-align-top {
+    vertical-align: top;
+  }
+
+  .vertical-align-middle {
+    vertical-align: middle;
+  }
+
+  .vertical-align-bottom {
+    vertical-align: bottom;
+  }
+
+  // This is not a helper, it's too specific with the logo styling inside it.
+
+  .list-group {
+    padding-left: 0px;
+
+    .list-group-items {
+      @extend .block;
+
+      .logo {
+        @extend .absolute;
+
+        max-height: 15px;
+        bottom: -55px;
+        left: 40px;
+      }
+    }
+  }
+
+.newspaper {
+  @include column-rule(1px, outset, #e1e1e1);
+  @include column-gap(40px);
+  @include column-rule-style(dashed);
+
+  line-height: 1.5em;
+  font-size: 15px;
+  font-weight: 400;
+  widows: 1;
+
+  &.col-1 {
+    @include column-count(1);
+  }
+
+  &.col-2 {
+    @include column-count(2);
+  }
+
+  &.col-3 {
+    @include column-count(3);
+    @include column-width(200px);
+  }
+}

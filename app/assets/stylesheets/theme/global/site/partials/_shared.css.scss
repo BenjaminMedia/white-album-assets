@@ -1,0 +1,46 @@
+/* Used on articles and galleries */
+.meta-information {
+  border-top: 2px dotted $gray-lighter;
+  border-bottom: 2px dotted $gray-lighter;
+  padding: 5px 0;
+  font-weight: normal;
+  
+  .label {
+    margin-right: 3px;
+  }
+  
+  .gutter-right {
+    margin-right: 5px;
+  }
+  
+  .gutter-left {
+    margin-left: 5px;
+  }
+  
+  p {
+    margin: 0;
+  }
+}
+
+.related-text {
+  ul {
+    padding-left: 25px !important;
+  }
+  
+  li {
+    list-style: none;
+    margin-bottom: 7px;
+    
+    &:before {
+      @extend .fontawesome;
+      position: absolute;
+      content: "\f10c";
+      margin-left: -25px;
+      padding-top: 2px;
+    }
+  }
+}
+
+.taxon {
+  margin-left: 4px;
+}

@@ -1,0 +1,110 @@
+.advertorial-diagonal {
+  @extend .absolute;
+  @extend .text-center;
+  @extend .overflow-hidden;
+  
+  z-index: 100;
+  width: 150px;
+  height: 150px;
+  
+  p {
+    @extend .text-bold;
+
+    @include rotate( 320deg, false, false);
+    
+    width: 200px;
+    padding: 5px;
+    color: white;
+    font-size: 0.7em;
+    background-color: $brand-primary;
+    margin: 30px 0 0 -50px;
+  }
+}
+
+.advertorial-diagonal-sm {
+  @extend .advertorial-diagonal;
+  
+  p {
+    width: 120px;
+    padding: 3px;
+    font-size: 0.7em;
+    margin: 20px 0 0 -25px;
+  }
+}
+
+.advertorial-stamp {
+  @extend .absolute;
+  @extend .text-center;
+  @extend .text-uppercase;
+  
+  background-color: #000;
+  color: #fff;
+  top: 0;
+  right: 0;
+  padding: 2px 10px;
+  z-index: 10;
+  
+  &.left {
+    left: 0;
+    right: auto;
+  }
+}
+
+.fontawesome {
+  @extend .inline-block;
+  
+  font-family: FontAwesome;
+  font-style: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.article-labels {
+  background: $gray-lighter;
+  color: $gray;
+  padding: 0px 8px 0px 8px;
+
+  .date-label {
+    &:before {
+      @extend .fontawesome;
+      
+      content: "\f017";
+    }
+  }
+
+  .comments-label {
+    &:before {
+      @extend .fontawesome;
+    
+      content: "\f075";
+    }
+  }
+
+  .likes-label {
+    &:before {
+      @extend .fontawesome;
+      
+      content: "\f164";
+    }
+  }
+
+  .category-label {
+    @extend .text-uppercase;
+    
+    font-size: 10px;
+    font-weight: 200;
+    
+    &:before {
+      @extend .fontawesome;
+      
+      content: "";
+    }
+  }
+}
+
+.label {
+  &, &:visited {
+    color: #fff;
+  }
+}
