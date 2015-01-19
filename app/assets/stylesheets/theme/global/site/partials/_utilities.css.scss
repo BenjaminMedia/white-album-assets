@@ -1,7 +1,7 @@
 .load-wheel {
   @extend .fa, .fa-spinner, .fa-spin, .gutter-top-lg;
   @extend .absolute;
-  
+
   font-size: 50px;
   left: 50%;
   margin-left: -25px;
@@ -14,40 +14,99 @@
   }
 }
 
-.modal-image {
-  @extend .text-center;
-  @extend .relative;
-  
-  width: 90%;
-  margin: 0 auto;
-  padding-top: 30px;
-  
-  .close {
-    @extend .absolute;
-    
-    right: 0;
-    color: #fff;
-    line-height: 0;
-  }
-}
-
 .modal {
   .close {
     @extend .right;
-    
+    @extend .pointer;
+
     font-size: 30px;
+  }
+}
+
+/* Full screen image modal toggled from Javascript component */
+.modal-full-screen {
+  @extend .full-width;
+  @extend .gutter-vertical-reset;
+  @extend .text-center;
+  @extend .relative;
+  @extend .center;
+
+  background-color: $gray-darker;
+
+  &, .modal-image {
+    height: 100%;
+  }
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .close {
+    @extend .absolute;
+
+    text-align: right;
+    right: 15px;
+    height: 50px;
+    line-height: 0;
+    text-shadow: 0 0 50px $gray-darker;
+
+    &:before {
+      @extend .fontawesome;
+
+      font-size: 35px;
+      padding-top: 8px;
+      color: #fff;
+      content: "\f066";
+    }
+
+    &:hover:before {
+      color: $brand-primary;
+    }
+  }
+
+  .modal-arrow {
+    @extend .pointer;
+
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+
+    &:before {
+      @extend .fontawesome;
+
+      font-size: 25px;
+      padding-top: 35px;
+      color: #fff;
+      opacity: 0.2;
+      content: "\f053";
+    }
+
+    &:hover:before {
+      opacity: 1;
+    }
+
+    &.arrow-right {
+      right: 0;
+
+      &:before {
+        content: "\f054";
+      }
+    }
   }
 }
 
 /* Toggled from plugins/adjust-image.js */
 .adjust-image-height {
-  height: 100%;
-  width: auto;
+  height: 100% !important;
+  width: auto !important;
 }
 
 .adjust-image-width {
-  height: auto;
-  width: 100%;
+  height: auto !important;
+  width: 100% !important;
 }
 
 
@@ -59,4 +118,39 @@ body {
   scrollbar-highlight-color: #ccc;
   scrollbar-3dlight-color: #fff;
   scrollbar-darkshadow-color: #fff;
+}
+
+/* used on widgetgroups and triggers when "stick-to-next" is active in admin/frontpages */
+.stick-to-next {
+  @extend .gutter-bottom-reset;
+  border-bottom: 0px !important;
+}
+
+.pagination {
+  & > li {
+    @extend .inline-block;
+    @extend .pull-left;
+  }
+
+  .gap {
+    @extend .pull-left;
+
+    padding: 6px;
+    color: $gray;
+  }
+}
+
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.pagination>li>a, .pagination>li>span {
+  padding: 5px 10px;
+  font-size: 12px;
 }

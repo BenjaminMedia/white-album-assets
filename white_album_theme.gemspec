@@ -1,3 +1,4 @@
+require File.expand_path('../../core/lib/white_album/version', __FILE__)
 require File.expand_path('../lib/theme/version', __FILE__)
 
 # Describe your gem and declare its dependencies:
@@ -18,14 +19,17 @@ Gem::Specification.new do |s|
   s.add_dependency "white_album_core", WhiteAlbum::VERSION
 
   # Use Bootstrap as the CSS framework
-  s.add_dependency "bootstrap-sass", "~> 3.1.0"
+  s.add_dependency "bootstrap-sass", "~> 3.2.0"
 
   # Use Compass mixins and variables when available to keep the CSS clean
-  s.add_dependency "compass-rails", "~> 1.1.2"
+  s.add_dependency "compass-rails", "~> 2.0.0"
 
   # RGBA plugin for Compass
   s.add_dependency "compass-rgbapng", "~> 0.2.1"
 
-  # font-awesome provides a collection of icon-fonts - use them instead of images if possible
-  s.add_dependency "font-awesome-sass", "~> 4.0.3"
+  # Extends media queries functionality to legacy IE
+  s.add_dependency 'respond-js-rails'
+
+  # Makes HTML5 tags available to legacy IE
+  s.add_dependency 'html5shiv-rails'
 end
