@@ -1,36 +1,53 @@
+.fontawesome {
+  @extend .inline-block;
+
+  font-family: FontAwesome;
+  font-style: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Used on articles and galleries */
 .meta-information {
+  @extend .text-muted;
+  @extend .text-small;
+
   border-top: 2px dotted $gray-lighter;
   border-bottom: 2px dotted $gray-lighter;
   padding: 5px 0;
   font-weight: normal;
-  
+
   .label {
     margin-right: 3px;
   }
-  
+
   .gutter-right {
     margin-right: 5px;
   }
-  
+
   .gutter-left {
     margin-left: 5px;
   }
-  
+
   p {
     margin: 0;
   }
+}
+
+.top-tags {
+  display: inline;
 }
 
 .related-text {
   ul {
     padding-left: 25px !important;
   }
-  
+
   li {
     list-style: none;
     margin-bottom: 7px;
-    
+
     &:before {
       @extend .fontawesome;
       position: absolute;
@@ -41,6 +58,205 @@
   }
 }
 
-.taxon {
-  margin-left: 4px;
+.tag-link {
+  padding-right: 0 !important;
+  color: $brand-primary !important;
+}
+
+.image-copyright {
+  @extend .full-width;
+  @extend .text-center;
+
+  p {
+    @extend .inline-block;
+    @extend .gutter-reset;
+
+    color: $gray-light;
+    padding: 3px;
+    font-size: 10px;
+  }
+}
+
+.image-caption {
+  @extend .text-tiny;
+
+  p {
+    @extend .gutter-vertical-reset;
+  }
+
+  .title {
+    @extend .text-bold;
+
+    text-transform: uppercase;
+    margin-right: 4px;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .copyright {
+    color: $gray-light;
+    margin-left: 4px;
+  }
+}
+
+.fb-comments, .fb-comments span, .fb-comments iframe {
+  min-width: 100% !important;
+  max-width: 100% !important;
+}
+
+.scroll-message {
+  @extend .hidden-xs-sm;
+
+  @include single-box-shadow(rgba(0,0,0,0.3), 0, 0, 7px, 0, false);
+  @include transition-property(margin-right);
+  @include transition-duration(0.5s);
+
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 200px;
+  background-color: #fff;
+  z-index: 10;
+  width: 240px;
+
+  a {
+    color: #000 !important;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  img {
+    @extend .full-width;
+  }
+}
+
+.scroll-message-text {
+  @extend .full-width;
+  @extend .absolute;
+  @extend .text-white;
+
+  @include rgba-background-inline(rgba(0, 0, 0, 0.45));
+
+  bottom: 0;
+  padding: 0 15px;
+
+  h4 {
+    margin-bottom: 15px;
+  }
+}
+
+.scroll-message-label {
+  @extend .text-white;
+  @extend .full-width;
+  @extend .gutter-reset;
+
+  font-size: 18px;
+  padding: 5px 10px;
+  background-color: $gray-dark;
+}
+
+/* ========== Opacity transitions ========== */
+
+.opacity-fade {
+  @include transition-property(all);
+  @include transition-duration(500ms);
+  @include transition-timing-function(ease);
+
+  @include animation(fadeIn);
+  @include animation-duration(500ms);
+
+  &.out {
+    opacity: 0.0 !important;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1.0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1.0;
+    }
+}
+
+/* ========== Load progress cascade ========== */
+
+.page-load-progress-xs-sm {
+  @extend .fixed;
+
+  left: 50%;
+  margin: -25px;
+  font-size: 50px;
+  top: 50%;
+}
+
+.page-load-progress {
+  @extend .fixed;
+
+  height: 40px;
+  margin: -20px 0 0 -75px;
+  left: 50%;
+  bottom: 0;
+  z-index: 100;
+
+  span {
+    @extend .inline-block;
+
+    @include transition-property(all);
+    @include transition-duration(500ms);
+    @include transition-timing-function(ease);
+
+    @include animation(wave 2s ease infinite);
+
+
+    background: $gray-dark;
+    border-radius: 10px;
+    height: 15px;
+    width: 15px;
+
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) {
+        @include animation-delay(100ms * $i);
+      }
+    }
+  }
+}
+
+@keyframes wave {
+  0%, 40%, 100% {
+    @include translate(0, 0);
+
+    background-color: $gray-dark;
+  }
+  10% {
+    @include translate(0, -15px);
+
+    background-color: $brand-primary;
+  }
+}
+
+@-webkit-keyframes wave {
+  0%, 40%, 100% {
+    @include translate(0, 0);
+
+    background-color: $gray-dark;
+  }
+  10% {
+    @include translate(0, -15px);
+
+    background-color: $brand-primary;
+  }
 }

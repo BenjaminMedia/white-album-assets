@@ -1,0 +1,82 @@
+.article-labels {
+  background: $gray-lighter;
+  color: $gray;
+  padding: 0px 8px 0px 8px;
+
+  .date-label {
+    &:before {
+      @extend .fontawesome;
+
+      content: "\f017";
+    }
+  }
+
+  .comments-label {
+    &:before {
+      @extend .fontawesome;
+
+      content: "\f075";
+    }
+  }
+
+  .likes-label {
+    &:before {
+      @extend .fontawesome;
+
+      content: "\f164";
+    }
+  }
+
+  .category-label {
+    @extend .text-uppercase;
+
+    font-size: 10px;
+    font-weight: 200;
+
+    &:before {
+      @extend .fontawesome;
+
+      content: "";
+    }
+  }
+}
+
+.label {
+  &, &:visited {
+    color: #fff;
+  }
+}
+
+/* ========== CONTENT LABELS ========== */
+.content-label {
+  @extend .relative;
+  @extend .text-center;
+  @extend .text-uppercase;
+
+  width: 100%;
+  color: #fff;
+  padding: 2px 10px;
+  z-index: 10;
+  background-color: $brand-primary;
+  font-size: 10px;
+}
+
+.content-label-widget {
+  @extend .full-width;
+}
+
+.mobile-swipe .content-label-widget {
+  @extend .absolute;
+}
+
+.content-in-rows .content-label-widget {
+  margin-bottom: 3px;
+}
+
+.linklist .content-label-widget {
+  @extend .inline-block;
+
+  position: static !important;
+  width: auto;
+  margin-right: 2px;
+}
